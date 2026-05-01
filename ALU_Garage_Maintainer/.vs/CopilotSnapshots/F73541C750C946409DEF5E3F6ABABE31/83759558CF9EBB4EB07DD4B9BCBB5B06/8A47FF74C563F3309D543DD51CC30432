@@ -1,0 +1,35 @@
+﻿import { Component,OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AluApi } from '../../Services/alu-api';
+import { FetchClass } from '../../Interfaces/FetchClass';
+@Component({
+  selector: 'app-add-car',
+  standalone: false,
+  templateUrl: './add-car.html',
+  styleUrl: './add-car.css',
+})
+export class AddCar implements OnInit {
+  errorMsg:string = "";
+  carClass:string[] = [];
+  showDivMsg:boolean = false;
+  ngOnInit() {
+    this.aluService.getAllCarClasses().subscribe({
+      next: (response: FetchClass)=>{
+        this.carClass=response.classes;
+        console.log(this.carClass);
+      },
+      error: (error) => {
+        this.errorMsg=error;
+        this.showDivMsg=true;
+      },
+      complete:()=>console.log("Fetched all the classes of cars")
+    }
+  )
+  }
+
+  constructor(private readonly aluService:AluApi, private readonly router: Router)
+  {
+
+  }
+}

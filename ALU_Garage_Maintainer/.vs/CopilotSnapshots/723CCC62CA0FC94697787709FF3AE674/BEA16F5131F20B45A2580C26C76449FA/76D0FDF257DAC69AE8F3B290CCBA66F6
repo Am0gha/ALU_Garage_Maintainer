@@ -1,0 +1,19 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using ALU_DAL.Models;
+using ALU_DAL;
+namespace ALU_API.Controllers
+{
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class CarsController : Controller
+    {
+        
+
+        [HttpGet]
+        public JsonResult GetAllCars()
+        {
+
+        }
+    }
+}

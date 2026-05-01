@@ -1,0 +1,7 @@
+﻿<div class="common-nav-bar">
+  <nav>
+    <
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

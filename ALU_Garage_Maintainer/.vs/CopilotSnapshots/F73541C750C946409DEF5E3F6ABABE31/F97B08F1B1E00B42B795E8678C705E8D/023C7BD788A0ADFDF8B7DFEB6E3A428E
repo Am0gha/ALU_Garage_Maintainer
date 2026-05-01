@@ -1,0 +1,19 @@
+﻿<div class="add-car-container">
+    <div class="add-car-card">
+        <form #addCarForm="ngForm">
+            <label>Class</label>
+            <!-- <label *ngFor="let cls of carClass">{{cls}}</label> -->
+            <select name="car-class" ngModel (change)="fetchRarity($event.target.value)">
+                <option value="" disabled selected>Select car's class</option>
+
+                <option *ngFor="let cls of carClass" [value]="cls">
+                    {{cls}}
+                </option>
+            </select>
+            
+            <div *ngIf="showDivMsg" class="bug">
+                {{errorMsg}}
+            </div>
+        </form>
+    </div>
+</div>

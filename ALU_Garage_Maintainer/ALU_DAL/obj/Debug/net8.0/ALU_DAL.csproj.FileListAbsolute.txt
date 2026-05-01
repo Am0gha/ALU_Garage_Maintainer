@@ -1,0 +1,14 @@
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\bin\Debug\net8.0\ALU_DAL.deps.json
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\bin\Debug\net8.0\ALU_DAL.runtimeconfig.json
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\bin\Debug\net8.0\ALU_DAL.dll
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\bin\Debug\net8.0\ALU_DAL.pdb
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.csproj.AssemblyReference.cache
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.AssemblyInfoInputs.cache
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.AssemblyInfo.cs
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.csproj.CoreCompileInputs.cache
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.dll
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\refint\ALU_DAL.dll
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.pdb
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.genruntimeconfig.cache
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ref\ALU_DAL.dll

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="ALU_DB.sql" />
+    <File Path="Vehicle_Class.sql" />
+    <File Path="Vehicle_data.sql" />
+  </Folder>
+  <Project Path="ALU_API/ALU_API.csproj" />
+  <Project Path="ALU_DAL/ALU_DAL.csproj" Id="0e70b7e0-df6e-46df-9722-2eaf1fbdb5c2" />
+</Solution>
