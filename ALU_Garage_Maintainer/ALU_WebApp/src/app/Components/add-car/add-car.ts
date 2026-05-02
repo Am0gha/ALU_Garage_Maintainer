@@ -62,7 +62,7 @@ export class AddCar implements OnInit {
     this.aluService.getAllRarityForClass(this.car.class).subscribe({
       next:(response: string[])=>{
         this.rarity=response;
-        console.log(this.rarity);
+        // console.log(this.rarity);
       },
       error:(error) => {
         this.errorMsg=error;
@@ -72,26 +72,11 @@ export class AddCar implements OnInit {
     })
   }
 
-  bp1_change(){ 
-      this.car.bp1sCount=null;
-  }
-
   fetchStars() {
     this.aluService.getValidStarForClassRarity(this.car.class, this.car.rarity).subscribe({
       next: (response: Number[]) => {
         this.stars = response;
-        switch(this.car.rarity)
-        {
-          case "COMM": this.car.bp4sCount=null;
-                       this.car.bp5sCount=null;
-                       this.car.bp6sCount=null;
-                       break;
-          case "RARE": this.car.bp5sCount=null;
-                       this.car.bp6sCount=null;
-                       break;
-          //case "EPIC" would be handled in the fetchFuel function's switch case.
-        }
-        console.log(this.stars);
+        // console.log(this.stars);
       },
       error: (error) => {
         this.errorMsg = error;
@@ -99,6 +84,7 @@ export class AddCar implements OnInit {
       },
       complete: () => console.log("Fetched the stars for the given car's class and rarity.")
     })
+    this.normalizeCarStats();
   }
 
   fetchFuel() {
@@ -108,36 +94,55 @@ export class AddCar implements OnInit {
         if(response.fuel != null)
           this.car.hasEips = true;
         this.car.noEips = response.eipAmt;
-        switch(this.car.maxStars)
-        {
-          case 3: this.car.bp4sCount=null;
-                  this.car.bp5sCount=null;
-                  this.car.bp6sCount=null;
-                  break;
-          case 4: this.car.bp5sCount=null;
-                  this.car.bp6sCount=null;
-                  break;
-          case 5: this.car.bp6sCount=null;  //-> This case handles the EPIC rarity issue for bp_5s_count and bp_6s_count
-                  break;
-        }
+        
         // console.log(response);
       },
-
+      
       error:(err) => {
         this.errorMsg = err;
         this.showDivMsg = true;
       },
-
+      
       complete: () => console.log("Fetched the valid fuel and EIP amount for the car.")
     })
+    this.normalizeCarStats();
   }
+
+  normalizeCarStats(){
+    if(this.car.requiresKey==true)
+    {
+      this.car.bp1sCount=null;
+    }
+
+    //Rarity case handling
+    switch(this.car.rarity)
+    {
+      case "COMM": this.car.bp4sCount=null;
+                    this.car.bp5sCount=null;
+                    this.car.bp6sCount=null;
+                    break;
+      case "RARE": this.car.bp5sCount=null;
+                    this.car.bp6sCount=null;
+                    break;
+      //case "EPIC" would be handled in the fetchFuel function's switch case.
+    }
+
+    //Stars case handling
+    if (this.car.maxStars==5)
+    {
+      this.car.bp6sCount=null;  //-> This case handles the EPIC rarity issue for bp_5s_count and bp_6s_count
+      console.log(this.car);
+    }
+
+  }
+
 
   addCar(addCarForm: NgForm){
     
     this.aluService.addCarToDB(this.car).subscribe({
       next:(response:number|null) => {
         console.log("Response returned: "+response);
-        console.log(this.car);
+        // console.log(this.car);
         switch(response)
         {
           case -1: alert("Invalid car details, check the value for car's class.");

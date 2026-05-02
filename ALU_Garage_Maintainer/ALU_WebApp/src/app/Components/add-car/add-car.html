@@ -19,15 +19,15 @@
           <br />
 
           <label>Rarity </label>
-          <select name="car-rarity" [(ngModel)]="car.rarity" (change)="fetchStars()">
+          <select name="car-rarity" [(ngModel)]="car.rarity" (ngModelChange)="fetchStars()">
               <option *ngFor="let rar of rarity" [value]="rar" selected>{{rar}}</option>
           </select>
           <br />
           <br />
 
           <label>Stars </label>
-          <select name="car-stars" [(ngModel)]="car.maxStars" (change)="fetchFuel();">
-              <option *ngFor="let star of stars" [value]="star" selected>{{star}}</option>
+          <select name="car-stars" [(ngModel)]="car.maxStars" (ngModelChange)="fetchFuel();">
+              <option *ngFor="let star of stars" [ngValue]="star" selected>{{star}}</option>
           </select>
           <br />
           <br />
@@ -68,7 +68,7 @@
           <br />
           
           <label>Requires Key </label>
-          <input type="radio" name="car-key" [(ngModel)]="car.requiresKey" [value]="true" (change)="bp1_change()">Yes
+          <input type="radio" name="car-key" [(ngModel)]="car.requiresKey" [value]="true" (change)="normalizeCarStats()">Yes
           <input type="radio" name="car-key" [(ngModel)]="car.requiresKey" [value]="false">No
           <br/>
           <br/>
