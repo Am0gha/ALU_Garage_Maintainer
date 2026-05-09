@@ -41,7 +41,10 @@ export class AddCar implements OnInit {
     bp6sCount: null
   }
   
+  constructor(private readonly aluService:AluApi, private readonly router: Router)
+  {
 
+  }
 
   ngOnInit() {
     this.aluService.getAllCarClasses().subscribe({
@@ -190,8 +193,5 @@ export class AddCar implements OnInit {
       complete: () => console.log("addCar function executed successfully.")
     })
   }
-  constructor(private readonly aluService:AluApi, private readonly router: Router)
-  {
-
-  }
+  
 }

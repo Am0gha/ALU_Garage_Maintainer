@@ -29,11 +29,13 @@ public partial class AluContext : DbContext
     {
         modelBuilder.Entity<Car>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cars__3213E83F894B7CC4");
+            entity.HasKey(e => e.Id).HasName("PK__cars__3213E83F2488124B");
 
             entity.ToTable("cars");
 
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.Acceleration)
                 .HasColumnType("numeric(4, 2)")
                 .HasColumnName("acceleration");
@@ -88,7 +90,7 @@ public partial class AluContext : DbContext
 
         modelBuilder.Entity<Class>(entity =>
         {
-            entity.HasKey(e => e.Class1).HasName("PK__class__71DF78ECEF7B0570");
+            entity.HasKey(e => e.Class1).HasName("PK__class__71DF78EC74084A12");
 
             entity.ToTable("class");
 
@@ -102,12 +104,11 @@ public partial class AluContext : DbContext
             entity.Property(e => e.MinFuel).HasColumnName("min_fuel");
             entity.Property(e => e.MinStars).HasColumnName("min_stars");
             entity.Property(e => e.ValidRarity).HasColumnName("valid_rarity");
-            entity.Property(e => e.ValidRarityForEip).HasColumnName("valid_rarity_for_eip");
         });
 
         modelBuilder.Entity<Rarity>(entity =>
         {
-            entity.HasKey(e => e.Rarity1).HasName("PK__rarity__068B639D1F47B71E");
+            entity.HasKey(e => e.Rarity1).HasName("PK__rarity__068B639D7C20BBB1");
 
             entity.ToTable("rarity");
 

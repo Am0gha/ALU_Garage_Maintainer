@@ -375,13 +375,6 @@ namespace ALU_DAL
                 }
 
                 //Done with the fuel part, now figure out the eip part.
-                int eipVal = _context.Classes.Find(cls).ValidRarityForEip;
-                List<string> valRarity = returnValidRarityForClass(eipVal);
-                if (!valRarity.Contains(rarity))
-                {
-                    res.eipAmt = null;
-                    return res;
-                }
                 
                 if (rarity == "COMM")
                 {

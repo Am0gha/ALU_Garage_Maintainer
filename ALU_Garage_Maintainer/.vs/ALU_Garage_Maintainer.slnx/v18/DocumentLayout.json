@@ -3,31 +3,40 @@
   "WorkspaceRootPath": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\alucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\alucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\alu_dal_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\alu_dal_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E031B126-0E09-5A52-2ACA-37B0474EB38C}|ALU_API\\ALU_API.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_api\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E031B126-0E09-5A52-2ACA-37B0474EB38C}|ALU_API\\ALU_API.csproj|solutionrelative:alu_api\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E031B126-0E09-5A52-2ACA-37B0474EB38C}|ALU_API\\ALU_API.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E031B126-0E09-5A52-2ACA-37B0474EB38C}|ALU_API\\ALU_API.csproj|solutionrelative:alu_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ALU/True/SqlTable/dbo.cars.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\scaffolding_new_tables.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\scaffolding_new_tables.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\alucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\alucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\fetchclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\fetchclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,20 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 345,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_API\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "ALU_API\\Controllers\\CarsController.cs",
-              "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_API\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "ALU_API\\Controllers\\CarsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:13:10.279Z",
-              "IsPinned": true
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -59,50 +59,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "dbo.cars.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ALU/True/SqlTable/dbo.cars.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ALU/True/SqlTable/dbo.cars.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-05-01T15:39:22.299Z"
+              "Title": "Car.cs",
+              "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "ALU_DAL\\Models\\Car.cs",
+              "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\Car.cs",
+              "RelativeToolTip": "ALU_DAL\\Models\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:59:18.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_API\\Program.cs",
-              "RelativeDocumentMoniker": "ALU_API\\Program.cs",
-              "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_API\\Program.cs",
-              "RelativeToolTip": "ALU_API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
+              "Title": "Class.cs",
+              "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\Class.cs",
+              "RelativeDocumentMoniker": "ALU_DAL\\Models\\Class.cs",
+              "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\Class.cs",
+              "RelativeToolTip": "ALU_DAL\\Models\\Class.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T13:22:43.548Z"
+              "WhenOpened": "2026-05-09T18:59:04.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ALU_DB.sql",
+              "DocumentIndex": 4,
+              "Title": "Scaffolding_New_tables.md",
+              "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Scaffolding_New_tables.md",
+              "RelativeDocumentMoniker": "ALU_DAL\\Scaffolding_New_tables.md",
+              "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Scaffolding_New_tables.md",
+              "RelativeToolTip": "ALU_DAL\\Scaffolding_New_tables.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-09T18:58:39.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ALU_DB.sql ",
               "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql",
               "RelativeDocumentMoniker": "ALU_DB.sql",
               "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql",
               "RelativeToolTip": "ALU_DB.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-05-01T12:21:22.179Z"
+              "WhenOpened": "2026-05-01T12:21:22.179Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AluContext.cs",
               "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\AluContext.cs",
               "RelativeDocumentMoniker": "ALU_DAL\\Models\\AluContext.cs",
               "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\AluContext.cs",
               "RelativeToolTip": "ALU_DAL\\Models\\AluContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBAwBEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAxwGEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:16:08.935Z"
+              "WhenOpened": "2026-05-01T12:16:08.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FetchClasses.cs",
               "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\FetchClasses.cs",
               "RelativeDocumentMoniker": "ALU_DAL\\Models\\FetchClasses.cs",
@@ -114,13 +134,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ALU_DAL_Repository.cs",
               "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\ALU_DAL_Repository.cs",
               "RelativeDocumentMoniker": "ALU_DAL\\ALU_DAL_Repository.cs",
               "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\ALU_DAL_Repository.cs",
               "RelativeToolTip": "ALU_DAL\\ALU_DAL_Repository.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAmwKoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAEwHoBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-01T12:13:12.333Z",
               "EditorCaption": ""

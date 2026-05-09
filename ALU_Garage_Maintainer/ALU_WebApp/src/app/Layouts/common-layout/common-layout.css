@@ -1,0 +1,15 @@
+.nav-left {
+    display: flex;
+    align-items: center; /* Vertically centers the links if the nav has a specific height */
+    gap: 20px; /* Adds space between the links; adjust this value as needed */
+}
+
+/* Optional: Basic styling for the links to make them look nice */
+.nav-left a {
+    text-decoration: none;
+    color: #333; /* Or whatever your theme color is */
+}
+
+.nav-left a:hover {
+    color: #007bff; /* Adds a hover effect */
+}

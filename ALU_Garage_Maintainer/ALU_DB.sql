@@ -28,12 +28,11 @@ create table class(
 	[min_fuel] tinyint not null,
 	[max_fuel] tinyint not null,
 	[valid_rarity] int not null,
-	[valid_rarity_for_eip] int not null,
+	
 	--These constratints set the limit on the fields / columns min_stars and max_stars
 	constraint [ck_min_stars] check ([min_stars] between 3 and 5),
     constraint [ck_max_stars] check ([max_stars] between 5 and 6),
 	constraint [ck_valid_rarity] check ([valid_rarity] between 1 and 7),
-	constraint [ck_valid_rarity_for_eip] check ([valid_rarity_for_eip] between 1 and 7),
 	--These constraints set the limit on the fields / columns min_fuel and max_fuel
 	constraint [ck_class_min_fuel] check (([class] in ('D','C') and [min_fuel]=4) or 
 										  ([class] in ('B','A','S') and [min_fuel]=3)),
@@ -46,18 +45,16 @@ create table class(
 											  ([class]='A' and valid_rarity=3) or 
 											  ([class]='S' and valid_rarity=1)),
 
-	constraint [ck_class_valid_rarity_for_eip] check (([class] in ('B','C') and valid_rarity_for_eip=7) or 
-													  ([class] in ('D','A') and valid_rarity_for_eip=3) or
-													  ([class]='S' and valid_rarity_for_eip=1))
+	
 )
 
-insert into class(class,min_stars,max_stars,min_fuel,max_fuel,valid_rarity,valid_rarity_for_eip) 
+insert into class(class,min_stars,max_stars,min_fuel,max_fuel,valid_rarity) 
 values 
-('S',5,6,3,4,1,1),
-('A',4,6,3,5,3,3),
-('B',3,6,3,6,7,7),
-('C',3,5,4,6,7,7),
-('D',3,5,4,6,7,3);
+('S',5,6,3,4,1),
+('A',4,6,3,5,3),
+('B',3,6,3,6,7),
+('C',3,5,4,6,7),
+('D',3,5,4,6,7);
 
 create table cars
 (

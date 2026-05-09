@@ -52,6 +52,18 @@ export class AluApi {
     return this.http.get<boolean>('https://localhost:7213/api/Cars/checkCarExists?name='+ carName).pipe(catchError(this.errorHandler))
   }
 
+  getCarList():Observable<ICar[]>
+  {
+    return this.http.get<ICar[]>('https://localhost:7213/api/Cars/GetAllCars')
+    .pipe(catchError(this.errorHandler));
+  }
+
+  getCarListOfClass(cls:string):Observable<ICar[]>
+  {
+    return this.http.get<ICar[]>('https://localhost:7213/api/Cars/GetCarOfClass?carClass='+cls)
+    .pipe(catchError(this.errorHandler));
+  }
+
   errorHandler(error:HttpErrorResponse){
     console.error(error);
     return throwError(()=>error.message || "Server Error");

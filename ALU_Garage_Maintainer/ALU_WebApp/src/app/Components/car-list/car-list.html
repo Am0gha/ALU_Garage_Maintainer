@@ -1,1 +1,23 @@
-<p>car-list works!</p>
+<div>
+    <div>
+        <br>
+        <label>Cars to display: </label>
+        <select [(ngModel)]="viewType" (change)="fetchCars()">
+            <option value="All">All</option>
+            <option value="Class">Class</option>
+        </select>
+    </div>
+    
+    @if (viewType=="Class") {
+        <div>
+            <br>
+            <label>Class: </label>
+            <select [(ngModel)]="selectCarClass">
+                <option *ngFor="let cls of carClass" [value]="cls">{{cls}}</option>
+            </select>
+        </div>
+    }
+    
+
+    
+</div>

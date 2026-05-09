@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path="ALU_API/ALU_API.csproj" />
     <File Path="ALU_DB.sql" />
     <File Path="Vehicle_Class.sql" />
     <File Path="Vehicle_data.sql" />

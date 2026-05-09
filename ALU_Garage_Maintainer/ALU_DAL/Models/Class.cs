@@ -17,8 +17,7 @@ public partial class Class
     public byte MaxFuel { get; set; }
 
     public int ValidRarity { get; set; }
-
-    public int ValidRarityForEip { get; set; }
     [JsonIgnore]
+
     public virtual ICollection<Car> Cars { get; set; } = new List<Car>();
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-common-layout',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './common-layout.html',
   styleUrl: './common-layout.css',
 })
-export class CommonLayout {
+export class CommonLayout implements OnInit{
 
+  constructor(){
+
+  }
+
+  ngOnInit(){
+    
+  }
 }

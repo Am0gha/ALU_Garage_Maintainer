@@ -1,21 +1,10 @@
 <nav class="navbar">
     <div class="nav-left">
-        <table>
-            <tr>
-                <td>
-
-                    <a routerLink="AddCar">Add Car</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a routerLink="CarList">Car List</a>
-                </td>
-            </tr>
-        </table>
-        
-    </div>
-    <div class="page-content">
-        <router-outlet></router-outlet>
+        <a routerLink="AddCar">Add Car</a>
+        <a routerLink="CarList">Car List</a>
     </div>
 </nav>
+
+<div class="page-content">
+    <router-outlet></router-outlet>
+</div>

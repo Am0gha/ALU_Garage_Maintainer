@@ -45,6 +45,7 @@ public partial class Car
     public int? Bp5sCount { get; set; }
 
     public int? Bp6sCount { get; set; }
+
     [JsonIgnore]
     public virtual Class ClassNavigation { get; set; }
 }
