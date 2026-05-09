@@ -48,6 +48,10 @@ export class AluApi {
     return this.http.post<number>('https://localhost:7213/api/Cars/AddCar',car).pipe(catchError(this.errorHandler))
   }
 
+  checkCarExists(carName: string): Observable<boolean> {
+    return this.http.get<boolean>('https://localhost:7213/api/Cars/checkCarExists?name='+ carName).pipe(catchError(this.errorHandler))
+  }
+
   errorHandler(error:HttpErrorResponse){
     console.error(error);
     return throwError(()=>error.message || "Server Error");

@@ -25,11 +25,20 @@ namespace ALU_DAL
             int? minStar = 3;
             int? maxStar = 6;
             int? carId = 0;
+            List<string> carList = new List<string>();
             //Condition to check if the class of the given car is valid
             try
             {
-                if (!_context.Classes.Select(c => c.Class1).ToList().Contains(car.Class))
+                //Checking for duplicate records based on car name
+                carList = _context.Cars.Select(c => c.Name).ToList();
+                if(carList.Contains(car.Name.ToUpper()))
+                {
                     return -1;
+                }
+
+                //Invalid car class
+                if (!_context.Classes.Select(c => c.Class1).ToList().Contains(car.Class))
+                    return -2;
 
                 else        //Valid class of the car
                 {
@@ -39,15 +48,15 @@ namespace ALU_DAL
 
                 //Out of bounds condition check for the car stars.
                 if (car.MaxStars < minStar || car.MaxStars > maxStar)
-                    return -2;
+                    return -3;
 
                 //Checks if the car doesn't require key then the BPS required to unlock it shouldn't be null and vice verse.
                 else if ((car.RequiresKey == false && car.Bp1sCount is null) || (car.RequiresKey == true && car.Bp1sCount is not null))
-                    return -3;
+                    return -4;
 
                 //Checks if the car requires EIP then it shouldn't have have NoEips field as null and vice verse.
                 else if ((car.HasEips == true && car.NoEips is null) || (car.HasEips == false && car.NoEips is not null))
-                    return -4;
+                    return -5;
 
                 carId = _context.Cars.OrderBy(c => c.Id).Select(x=>x.Id).LastOrDefault();
 
@@ -210,6 +219,27 @@ namespace ALU_DAL
             return fuelRange;
         }
 
+        public bool? checkCarExists(string name)
+        {
+            if (name == null)
+            {
+                return null;
+            }
+            bool? carExists = false;
+            try
+            {
+                if (_context.Cars.Select(c => c.Name).Contains(name.ToUpper()))
+                {
+                    carExists = true;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            return carExists;
+        }
+
         //Part 1 -> classes, rarities, stars and fuel system (solved)
         public List<string>? returnAllCarClasses()
         {
@@ -324,46 +354,6 @@ namespace ALU_DAL
                 return null;    //If return value null, exception occurred in DAL
             }
             return stars;
-        }
-
-        public int? oldReturnValidFuelForClassRarityStar(string cls, string rarity,int stars)
-        {
-            int? fuel = 0;
-            try
-            {
-                bool flag1 = _context.Classes.Any(c => c.Class1 == cls);
-                bool flag2 = returnValidRarityList(cls).Contains(rarity);
-                bool flag3 = returnValidStarsForClassRarity(cls, rarity).Contains(stars);
-                
-                if (flag1 && flag2 && flag3)
-                {
-                    List<int>? fuelRange = returnMinMaxFuel(cls);
-                    List<int>? starRange = fetchValidStarRangeForClass(cls);
-                    for (int i = 0; i <= (starRange[1] - starRange[0]); i++)
-                    {
-                        if (stars == starRange[0] + i)
-                        {
-                            fuel = _context.Classes.Where(c => c.Class1 == cls).Select(f => f.MaxFuel).FirstOrDefault() - i;
-                            break;
-                        }
-                    }
-                    //We figured out the fuel the car is assigned. Now figure out the eipAmt
-                    int eipVal = _context.Classes.Find(cls).ValidRarityForEip;
-                    List<string> valEipRar = returnValidRarityForClass(eipVal);
-                    
-                }
-
-                else if (!flag1) return -1; //Invalid Class Input
-                else if (!flag2) return -2; //Invalid Rarity Input for the given class
-                else if (!flag3) return -3; //Invalid Stars Input for the given class and rarity
-                else return -99;
-            }
-            catch(Exception)
-            {
-                return null;
-            }
-
-            return fuel;
         }
 
         //Part 2 -> handling eip system for each

@@ -12,3 +12,4 @@ D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\refint\ALU_DAL
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.pdb
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.genruntimeconfig.cache
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ref\ALU_DAL.dll
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_DAL\obj\Debug\net8.0\ALU_DAL.sourcelink.json

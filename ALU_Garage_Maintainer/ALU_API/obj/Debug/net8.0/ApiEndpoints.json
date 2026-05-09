@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "ALU_API.Controllers.CarsController",
+    "Method": "checkCarExists",
+    "RelativePath": "api/Cars/checkCarExists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ALU_API.Controllers.CarsController",
     "Method": "GetAllCars",
     "RelativePath": "api/Cars/GetAllCars",
     "HttpMethod": "GET",

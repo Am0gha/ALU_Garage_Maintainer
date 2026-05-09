@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ALU_DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+176f2127e249fa0942e4336c76cffce2fb4ca03a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ALU_DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ALU_DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

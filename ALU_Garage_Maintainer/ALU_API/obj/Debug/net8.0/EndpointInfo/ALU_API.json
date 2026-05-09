@@ -5,6 +5,27 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Cars/checkCarExists": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cars/GetAllCars": {
       "get": {
         "tags": [

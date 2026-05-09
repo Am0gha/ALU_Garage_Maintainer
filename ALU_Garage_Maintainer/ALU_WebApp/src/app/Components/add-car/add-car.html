@@ -4,7 +4,7 @@
 
           <br />
           <label>Name </label>
-          <input name="car-name" [(ngModel)]="car.name" placeholder="Enter the full name of the car"/>
+          <input name="car-name" [(ngModel)]="car.name" placeholder="Enter the full name of the car" (ngModelChange)="checkCarExists(addCarForm)"/>
           <br />
           <br />
 

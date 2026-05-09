@@ -136,7 +136,24 @@ export class AddCar implements OnInit {
 
   }
 
+  checkCarExists(addCarForm: NgForm){
+    this.aluService.checkCarExists(this.car.name).subscribe({
+      next: (response:boolean) => {
+        if(response == true)
+        {
+          alert("This car already exists in the database, please check and try again.");
+          addCarForm.reset();
+        }
+      },
+      
+      error: (err) => {
+        this.errorMsg = err;
+        this.showDivMsg = true;
+      },
 
+      complete: ()=>console.log("Checked if the given car exists or not.")
+    })
+  }
   addCar(addCarForm: NgForm){
     
     this.aluService.addCarToDB(this.car).subscribe({
@@ -145,13 +162,15 @@ export class AddCar implements OnInit {
         // console.log(this.car);
         switch(response)
         {
-          case -1: alert("Invalid car details, check the value for car's class.");
+          case -1: alert("Car already exists by the name '"+this.car.name+"'. Please try again.");
                    break;
-          case -2: alert("Invalid car details, star count for car is out of valid range.");
+          case -2: alert("Invalid car details, check the value for car's class.");
                    break;
-          case -3: alert("Invalid car details, check the key option.");
+          case -3: alert("Invalid car details, star count for car is out of valid range.");
                    break;
-          case -4: alert("Invalid car details, check the EIP requirements.");
+          case -4: alert("Invalid car details, check the key option.");
+                   break;
+          case -5: alert("Invalid car details, check the EIP requirements.");
                    break;
           case null: alert("Something went wrong in the backend. Contact the admin.");
                      break;

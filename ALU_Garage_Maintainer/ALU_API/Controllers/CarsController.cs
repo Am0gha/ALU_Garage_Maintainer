@@ -18,6 +18,21 @@ namespace ALU_API.Controllers
         }
 
         [HttpGet]
+        public JsonResult checkCarExists(string name)
+        {
+            bool? result = false;
+            try
+            {
+                result = _repo.checkCarExists(name);
+            }
+            catch(Exception ex)
+            {
+                return Json(ex.Message);
+            }
+            return Json(result);
+        }
+
+        [HttpGet]
         public JsonResult GetAllCars()
         {
             List<Car> cars = new List<Car>();

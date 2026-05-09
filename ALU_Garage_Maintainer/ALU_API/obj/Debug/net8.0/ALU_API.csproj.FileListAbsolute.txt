@@ -90,3 +90,4 @@ D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_API\obj\Debug\net8.0\refint\ALU_API
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_API\obj\Debug\net8.0\ALU_API.pdb
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_API\obj\Debug\net8.0\ALU_API.genruntimeconfig.cache
 D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_API\obj\Debug\net8.0\ref\ALU_API.dll
+D:\ALU_Garage_Data\ALU_Garage_Maintainer\ALU_API\obj\Debug\net8.0\ALU_API.sourcelink.json
