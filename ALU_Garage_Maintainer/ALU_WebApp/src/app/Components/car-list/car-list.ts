@@ -20,27 +20,24 @@ export class CarList implements OnInit{
   }
 
   fetchCars(){
-    if(this.viewType == "All")
-    {
-      this.aluService.getCarList().subscribe(
-        {
-          next:(response:ICar[])=>{
-            this.carList = response;
-            console.log(this.carList);
-          },
+    this.aluService.getCarList().subscribe(
+      {
+        next:(response:ICar[])=>{
+          this.carList = response;
+          console.log(this.carList);
+        },
 
-          error:(err)=>{
-            this.errorMsg = err;
-            this.showDivMsg = true;
-          },
+        error:(err)=>{
+          this.errorMsg = err;
+          this.showDivMsg = true;
+        },
 
-          complete:() => console.log("Executed the fetchCars function successfully.")
-        }
-      )
-    }
+        complete:() => console.log("Executed the fetchCars function successfully.")
+      }
+    )
+  }
 
-    else if(this.viewType == "Class")
-    {
+  fetchCarsOfClass(){
       this.aluService.getCarListOfClass(this.selectCarClass).subscribe(
         {
           next:(response:ICar[]) => {
@@ -56,7 +53,6 @@ export class CarList implements OnInit{
           complete:()=>console.log("Executed the fetchCars for a given class successfully.")
         }
       )
-    }
   }
 
   ngOnInit(): void {

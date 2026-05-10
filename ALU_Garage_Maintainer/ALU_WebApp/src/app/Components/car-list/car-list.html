@@ -12,12 +12,40 @@
         <div>
             <br>
             <label>Class: </label>
-            <select [(ngModel)]="selectCarClass">
+            <select [(ngModel)]="selectCarClass" (change)="fetchCarsOfClass()">
                 <option *ngFor="let cls of carClass" [value]="cls">{{cls}}</option>
             </select>
         </div>
     }
-    
 
-    
+    <div class="table-container">
+        <table name="car-table">
+            <thead>
+                <tr>
+                    <th>Car Name</th>
+                    <th>Rarity</th>
+                    <th>Max Stars</th>
+                    <th>Top Speed</th>
+                    <th>Acceleration</th>
+                    <th>Handling</th>
+                    <th>Nitro</th>
+                    <th>Requires Key</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let car of carList">
+                    <td>{{car.name}}</td>
+                    <td>{{car.rarity}}</td>
+                    <td>{{car.maxStars}}</td>
+                    <td>{{car.topSpeed}}</td>
+                    <td>{{car.acceleration}}</td>
+                    <td>{{car.handling}}</td>
+                    <td>{{car.nitro}}</td>
+                    <td>{{car.requiresKey}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     
 </div>

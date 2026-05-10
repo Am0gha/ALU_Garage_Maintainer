@@ -29,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|d:\\alu_garage_data\\alu_garage_maintainer\\alu_dal\\models\\fetchclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E70B7E0-DF6E-46DF-9722-2EAF1FBDB5C2}|ALU_DAL\\ALU_DAL.csproj|solutionrelative:alu_dal\\models\\fetchclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:ALU_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,8 +58,7 @@
               "RelativeToolTip": "ALU_DAL\\Models\\Car.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T18:59:18.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T18:59:18.41Z"
             },
             {
               "$type": "Document",
@@ -79,8 +70,7 @@
               "RelativeToolTip": "ALU_DAL\\Models\\Class.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T18:59:04.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T18:59:04.627Z"
             },
             {
               "$type": "Document",
@@ -92,20 +82,18 @@
               "RelativeToolTip": "ALU_DAL\\Scaffolding_New_tables.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-09T18:58:39.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T18:58:39.145Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ALU_DB.sql ",
+              "Title": "ALU_DB.sql",
               "DocumentMoniker": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql",
               "RelativeDocumentMoniker": "ALU_DB.sql",
               "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DB.sql",
               "RelativeToolTip": "ALU_DB.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-05-01T12:21:22.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T12:21:22.179Z"
             },
             {
               "$type": "Document",
@@ -115,7 +103,7 @@
               "RelativeDocumentMoniker": "ALU_DAL\\Models\\AluContext.cs",
               "ToolTip": "D:\\ALU_Garage_Data\\ALU_Garage_Maintainer\\ALU_DAL\\Models\\AluContext.cs",
               "RelativeToolTip": "ALU_DAL\\Models\\AluContext.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAxwGEAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-01T12:16:08.935Z",
               "EditorCaption": ""
@@ -142,8 +130,7 @@
               "RelativeToolTip": "ALU_DAL\\ALU_DAL_Repository.cs",
               "ViewState": "AgIAAPMAAAAAAAAAAAAEwHoBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:13:12.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T12:13:12.333Z"
             }
           ]
         }

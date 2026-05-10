@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ALU_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16323ab1fdeac8713ec9f38079aee4e61ac6f386")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+836442b28da9b13e3eebd27c525b7ea7514f09f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ALU_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ALU_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
