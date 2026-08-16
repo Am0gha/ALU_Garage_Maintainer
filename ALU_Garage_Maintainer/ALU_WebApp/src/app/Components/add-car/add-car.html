@@ -4,79 +4,79 @@
 
           <br />
           <label>Name </label>
-          <input name="car-name" [(ngModel)]="car.name" placeholder="Enter the full name of the car" (ngModelChange)="checkCarExists(addCarForm)"/>
+          <input name="car-name" [(ngModel)]="car().name" placeholder="Enter the full name of the car" (ngModelChange)="checkCarExists(addCarForm)"/>
           <br />
           <br />
 
           <label>Class </label>
           <!-- <label *ngFor="let cls of carClass">{{cls}}</label> -->
-          <select name="car-class" [(ngModel)]="car.class" (change)="fetchRarity()">
+          <select name="car-class" [(ngModel)]="car().class" (change)="fetchRarity()">
               <option value="" disabled selected>Select car's class</option>
 
-              <option *ngFor="let cls of carClass" [value]="cls">{{cls}}</option>
+              <option *ngFor="let cls of carClass()" [value]="cls">{{cls}}</option>
           </select>
           <br />
           <br />
 
           <label>Rarity </label>
-          <select name="car-rarity" [(ngModel)]="car.rarity" (ngModelChange)="fetchStars()">
-              <option *ngFor="let rar of rarity" [value]="rar" selected>{{rar}}</option>
+          <select name="car-rarity" [(ngModel)]="car().rarity" (ngModelChange)="fetchStars()">
+              <option *ngFor="let rar of rarity()" [value]="rar" selected>{{rar}}</option>
           </select>
           <br />
           <br />
 
           <label>Stars </label>
-          <select name="car-stars" [(ngModel)]="car.maxStars" (ngModelChange)="fetchFuel();">
-              <option *ngFor="let star of stars" [ngValue]="star" selected>{{star}}</option>
+          <select name="car-stars" [(ngModel)]="car().maxStars" (ngModelChange)="fetchFuel();">
+              <option *ngFor="let star of stars()" [ngValue]="star" selected>{{star}}</option>
           </select>
           <br />
           <br />
 
           <label>Fuel </label>
-          <input name="car-fuel" [(ngModel)]="car.fuel" disabled>
+          <input name="car-fuel" [(ngModel)]="car().fuel" disabled>
           <br />
           <br />
           
           <label>Top Speed </label>
-          <input type="number" name="car-top-speed" [(ngModel)]="car.topSpeed"/>
+          <input type="number" name="car-top-speed" [(ngModel)]="car().topSpeed"/>
           <br />
           <br />
 
           <label>Acceleration </label>
-          <input type="number" name="car-acceleration" [(ngModel)]="car.acceleration"/>
+          <input type="number" name="car-acceleration" [(ngModel)]="car().acceleration"/>
           <br />
           <br />
 
           <label>Handling </label>
-          <input type="number" name="car-handling" [(ngModel)]="car.handling"/>
+          <input type="number" name="car-handling" [(ngModel)]="car().handling"/>
           <br />
           <br />
           
           <label>Nitro </label>
-          <input type="number" name="car-nitro" [(ngModel)]="car.nitro"/>
+          <input type="number" name="car-nitro" [(ngModel)]="car().nitro"/>
           <br />
           <br />
         
           <label>Epic Imprt Parts </label>
-          <input name="car-eip-amount" [(ngModel)]="car.noEips" disabled/>
+          <input name="car-eip-amount" [(ngModel)]="car().noEips" disabled/>
           <br />
           <br />
 
           <label>Max Rank </label>
-          <input name="car-max-rank" [(ngModel)]="car.maxRank" placeholder="Enter the max rank">
+          <input name="car-max-rank" [(ngModel)]="car().maxRank" placeholder="Enter the max rank">
           <br />
           <br />
           
           <label>Requires Key </label>
-          <input type="radio" name="car-key" [(ngModel)]="car.requiresKey" [value]="true" (change)="normalizeCarStats()">Yes
-          <input type="radio" name="car-key" [(ngModel)]="car.requiresKey" [value]="false">No
+          <input type="radio" name="car-key" [(ngModel)]="car().requiresKey" [value]="true" (change)="normalizeCarStats()">Yes
+          <input type="radio" name="car-key" [(ngModel)]="car().requiresKey" [value]="false">No
           <br/>
           <br/>
           
-        @if (this.car.requiresKey == false) {
+        @if (this.car().requiresKey == false) {
           <div>
             <label>Blueprints required for 1⭐ </label>
-            <input name="car-bp1" [(ngModel)]="car.bp1sCount" type="number" placeholder="Number of blueprints to unlock it">
+            <input name="car-bp1" [(ngModel)]="car().bp1sCount" type="number" placeholder="Number of blueprints to unlock it">
             <br/>
         </div>
         <br/>
@@ -84,36 +84,36 @@
 
         <div>
             <label>Blueprints required for 2⭐ </label>
-            <input name="car-bp2" [(ngModel)]="car.bp2sCount" type="number" placeholder="Number of blueprints to upgrade it">
+            <input name="car-bp2" [(ngModel)]="car().bp2sCount" type="number" placeholder="Number of blueprints to upgrade it">
             <br/>
             <br/>
         
             <label>Blueprints required for 3⭐ </label>
-            <input name="car-bp3" [(ngModel)]="car.bp3sCount" type="number" placeholder="Number of blueprints to upgrade it">
+            <input name="car-bp3" [(ngModel)]="car().bp3sCount" type="number" placeholder="Number of blueprints to upgrade it">
         </div>
         <br/>
         
 
-        @if (car && car.maxStars>=4){
+        @if (car() && car().maxStars>=4){
             <div>
                 <label>Blueprints required for 4⭐</label>
-                <input name="car-bp4" [(ngModel)]="car.bp4sCount" type="number" placeholder="Number of blueprints to upgrade it">
+                <input name="car-bp4" [(ngModel)]="car().bp4sCount" type="number" placeholder="Number of blueprints to upgrade it">
             </div>
           <br/>
         }
 
-        @if (car && car.maxStars>=5){
+        @if (car() && car().maxStars>=5){
             <div>
                 <label>Blueprints required for 5⭐</label>
-                <input name="car-bp5" [(ngModel)]="car.bp5sCount" type="number" placeholder="Number of blueprints to upgrade it">
+                <input name="car-bp5" [(ngModel)]="car().bp5sCount" type="number" placeholder="Number of blueprints to upgrade it">
             </div>
           <br/>
         }
 
-        @if (car && car.maxStars==6){
+        @if (car() && car().maxStars==6){
             <div>
                 <label>Blueprints required for 6⭐</label>
-                <input name="car-bp6" [(ngModel)]="car.bp6sCount" type="number" placeholder="Number of blueprints to upgrade it">
+                <input name="car-bp6" [(ngModel)]="car().bp6sCount" type="number" placeholder="Number of blueprints to upgrade it">
             </div>
           <br/>
         }

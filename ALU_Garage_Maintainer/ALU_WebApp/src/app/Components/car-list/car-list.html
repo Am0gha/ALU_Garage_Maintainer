@@ -2,24 +2,24 @@
     <div>
         <br>
         <label>Cars to display: </label>
-        <select [(ngModel)]="viewType" (change)="fetchCars()">
+        <select [(ngModel)]="viewType" (ngModelChange)="onViewTypeChange($event)">
             <option value="All">All</option>
             <option value="Class">Class</option>
         </select>
     </div>
     
-    @if (viewType=="Class") {
+    <div *ngIf="viewType === 'Class'">
         <div>
             <br>
             <label>Class: </label>
-            <select [(ngModel)]="selectCarClass" (change)="fetchCarsOfClass()">
-                <option *ngFor="let cls of carClass" [value]="cls">{{cls}}</option>
-            </select>
+            <a *ngFor="let cls of carClass()" href="javascript:void(0)" (click)="onSelectCarClassChange(cls)">
+                {{cls}}&nbsp;
+            </a>
         </div>
-    }
+    </div>
 
-    <div class="table-container">
-        <table name="car-table">
+    <div class="table-container" *ngIf="carList().length > 0">
+        <table class="car-table" name="car-table">
             <thead>
                 <tr>
                     <th>Car Name</th>
@@ -34,7 +34,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let car of carList">
+                <tr *ngFor="let car of carList()">
                     <td>{{car.name}}</td>
                     <td>{{car.rarity}}</td>
                     <td>{{car.maxStars}}</td>
@@ -47,5 +47,7 @@
             </tbody>
         </table>
     </div>
-     
+    <div class="empty-message" *ngIf="carList().length === 0">
+        No cars available. Select "All" or choose a class to load vehicles.
+    </div>
 </div>

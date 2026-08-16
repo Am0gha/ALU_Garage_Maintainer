@@ -4,7 +4,7 @@ import { Component,OnInit } from '@angular/core';
   selector: 'app-common-layout',
   standalone: false,
   templateUrl: './common-layout.html',
-  styleUrl: './common-layout.css',
+  styleUrls: ['./common-layout.css'],
 })
 export class CommonLayout implements OnInit{
 

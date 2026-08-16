@@ -12,7 +12,7 @@ namespace ALU_DAL
 {
     public class ALU_DAL_Repository
     {
-        static AluContext _context;
+        AluContext _context;
 
         public ALU_DAL_Repository(AluContext context)
         {

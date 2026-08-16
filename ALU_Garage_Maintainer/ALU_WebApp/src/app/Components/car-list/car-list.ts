@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,signal } from '@angular/core';
 import { ICar } from '../../Interfaces/Car';
 import { AluApi } from '../../Services/alu-api';
 import { Router } from '@angular/router';
@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
   selector: 'app-car-list',
   standalone: false,
   templateUrl: './car-list.html',
-  styleUrl: './car-list.css',
+  styleUrls: ['./car-list.css'],
 })
 export class CarList implements OnInit{
-  viewType: string = "";
+  viewType: string = 'All';
   errorMsg: string = "";
   showDivMsg: boolean = false;
-  carList: ICar[] = [];
-  carClass: string[] = [];
+  carList = signal<ICar[]>([]);
+  carClass = signal<string[]>([]);
   selectCarClass: string = "";
   constructor(private readonly aluService:AluApi, private readonly router:Router){
     
@@ -23,8 +23,8 @@ export class CarList implements OnInit{
     this.aluService.getCarList().subscribe(
       {
         next:(response:ICar[])=>{
-          this.carList = response;
-          console.log(this.carList);
+          this.carList.set(response);
+          console.log(this.carList());
         },
 
         error:(err)=>{
@@ -41,25 +41,37 @@ export class CarList implements OnInit{
       this.aluService.getCarListOfClass(this.selectCarClass).subscribe(
         {
           next:(response:ICar[]) => {
-            this.carList = response;
-            console.log(this.carList);
+            this.carList.set(response);
+            console.log(this.carList());
           },
 
           error:(err) => {
+                        
             this.errorMsg = err;
             this.showDivMsg = true;
           },
 
-          complete:()=>console.log("Executed the fetchCars for a given class successfully.")
-        }
+          complete:()=>
+            {
+              console.log("Executed the fetchCars for a given class successfully :"+this.selectCarClass);
+            }
+          }
       )
   }
 
+  onSelectCarClassChange(value: string) {
+    this.selectCarClass = value;
+    this.fetchCarsOfClass();
+  }
+
   ngOnInit(): void {
+    this.fetchCars();
+    //We don't need to fetch the classes instead
+    //We can add hyperlinks for each class
     this.aluService.getAllCarClasses().subscribe(
       {
         next:(response:string[]) => {
-          this.carClass = response;
+          this.carClass.set(response);
         },
 
         error: (err) => {
@@ -70,5 +82,14 @@ export class CarList implements OnInit{
         complete: () => console.log("Fetched the list of car class successfully.")
       }
     )
+  }
+
+  onViewTypeChange(value: string) {
+    this.viewType = value;
+    if (value === 'All') {
+      this.fetchCars();
+    } else {
+      this.carList.set([]);
+    }
   }
 }
