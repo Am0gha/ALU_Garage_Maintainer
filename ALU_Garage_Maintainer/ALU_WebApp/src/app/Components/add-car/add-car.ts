@@ -96,7 +96,7 @@ export class AddCar implements OnInit {
         this.car.set({
           ...this.car(),
           fuel: response.fuel,
-          hasEips: response.fuel != null,
+          hasEips: response.eipAmt != null,
           noEips: response.eipAmt
         });
         
