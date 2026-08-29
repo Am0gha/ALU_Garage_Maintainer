@@ -1,24 +1,48 @@
-<div>
-    <div>
-        <br>
-        <label>Cars to display: </label>
-        <select [(ngModel)]="viewType" (ngModelChange)="onViewTypeChange($event)">
-            <option value="All">All</option>
-            <option value="Class">Class</option>
-        </select>
-    </div>
-    
-    <div *ngIf="viewType === 'Class'">
+<div class="car-page">
+    <header class="page-header">
         <div>
-            <br>
-            <label>Class: </label>
-            <a *ngFor="let cls of carClass()" href="javascript:void(0)" (click)="onSelectCarClassChange(cls)">
-                {{cls}}&nbsp;
-            </a>
+            <p class="eyebrow">Garage dashboard</p>
+            <h1>Vehicle inventory</h1>
         </div>
+
+        <div class="toolbar">
+            <label class="select-field">
+                <span>Cars to display</span>
+                <select [(ngModel)]="viewType" (ngModelChange)="onViewTypeChange($event)">
+                    <option value="All">All</option>
+                    <option value="Class">Class</option>
+                </select>
+            </label>
+        </div>
+    </header>
+
+    <section class="panel" *ngIf="viewType === 'Class'">
+        <div class="filter-header">
+            <span>Filter by class</span>
+            <div class="class-pills" *ngIf="carClass().length > 0">
+                <button
+                    *ngFor="let cls of carClass()"
+                    type="button"
+                    class="class-pill"
+                    [class.active]="selectCarClass === cls"
+                    (click)="onSelectCarClassChange(cls)">
+                    Class {{ cls }}
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div *ngIf="showDivMsg" class="alert-message">
+        {{ errorMsg }}
     </div>
 
-    <div class="table-container" *ngIf="carList().length > 0">
+    <div class="table-container" *ngIf="carList().length > 0; else emptyState">
+        <div class="table-summary">
+            <span class="summary-label">Showing</span>
+            <strong>{{ carList().length }}</strong>
+            <span>{{ viewType === 'All' ? 'vehicles' : 'vehicles in Class ' + selectCarClass }}</span>
+        </div>
+
         <table class="car-table" name="car-table">
             <thead>
                 <tr>
@@ -30,24 +54,40 @@
                     <th>Handling</th>
                     <th>Nitro</th>
                     <th>Requires Key</th>
-
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let car of carList()">
-                    <td>{{car.name}}</td>
-                    <td>{{car.rarity}}</td>
-                    <td>{{car.maxStars}}</td>
-                    <td>{{car.topSpeed}}</td>
-                    <td>{{car.acceleration}}</td>
-                    <td>{{car.handling}}</td>
-                    <td>{{car.nitro}}</td>
-                    <td>{{car.requiresKey}}</td>
+                    <td class="car-name-cell">
+                        <div class="car-name-stack">
+                            <span class="car-name">{{ car.name }}</span>
+                            <span class="car-class">{{ car.class }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="rarity-badge" [ngClass]="'rarity-' + (car.rarity || 'common').toLowerCase()">
+                            {{ car.rarity }}
+                        </span>
+                    </td>
+                    <td>{{ car.maxStars }}</td>
+                    <td>{{ car.topSpeed }}</td>
+                    <td>{{ car.acceleration }}</td>
+                    <td>{{ car.handling }}</td>
+                    <td>{{ car.nitro }}</td>
+                    <td>
+                        <span class="status-pill" [class.positive]="car.requiresKey" [class.negative]="!car.requiresKey">
+                            {{ car.requiresKey ? 'Yes' : 'No' }}
+                        </span>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="empty-message" *ngIf="carList().length === 0">
-        No cars available. Select "All" or choose a class to load vehicles.
-    </div>
+
+    <ng-template #emptyState>
+        <div class="empty-message">
+            <h3>No cars available</h3>
+            <p>Select “All” or choose a class to load vehicles.</p>
+        </div>
+    </ng-template>
 </div>
