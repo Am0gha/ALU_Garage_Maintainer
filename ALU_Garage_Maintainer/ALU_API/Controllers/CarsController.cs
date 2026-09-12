@@ -99,6 +99,22 @@ namespace ALU_API.Controllers
         }
 
         [HttpGet]
+        public JsonResult GetCarByName(string carName)
+        {
+            List<Car> cars = new List<Car>();
+            try
+            {
+                cars = _repo.fetchCarFromName(carName);
+            }
+            catch(Exception ex)
+            {
+                cars = null;
+                return Json(ex.Message);
+            }
+
+            return Json(cars);
+        }
+        [HttpGet]
         public JsonResult GetCarOfClassRarity(string carClass, string rarity)
         {
             List<Car>? cars = new List<Car>();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ALU_DAL;
@@ -159,6 +160,21 @@ namespace ALU_DAL
             }
             return cars;
             
+        }
+
+        public List<Car>? fetchCarFromName(string carName)
+        {
+            List<Car> cars = new List<Car>();
+
+            try
+            {
+                cars = _context.Cars.Where(c => c.Name.Contains(carName)).ToList();
+                return cars;
+            }
+            catch(Exception)
+            {
+                return null;
+            }
         }
 
         //Adds car to DB.
