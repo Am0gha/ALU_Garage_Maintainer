@@ -65,21 +65,28 @@ namespace ALU_API.Controllers
 
         }
 
-        [HttpGet]
-        public JsonResult GetCarOfClass(string carClass)
-        {
-            List<Car> cars = new List<Car>();
-            try
-            {
-                cars = _repo.fetchCarFromClass(carClass);
-            }
-            catch (Exception ex)
-            {
-                cars = null;
-                return Json(ex.Message);
-            }
-            return Json(cars);
-        }
+        /// <summary>
+        /// Commented because this API call would return the results of global table, wouldn't work on the class table.
+        /// Makes it redundant that every time someone selects a class it should query the table once again.
+        /// Wherein the entire table is already received by the Angular when the page is loaded
+        /// </summary>
+        /// <param name="car"></param>
+        /// <returns></returns>
+        //[HttpGet]
+        //public JsonResult GetCarOfClass(string carClass)
+        //{
+        //    List<Car> cars = new List<Car>();
+        //    try
+        //    {
+        //        cars = _repo.fetchCarFromClass(carClass);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        cars = null;
+        //        return Json(ex.Message);
+        //    }
+        //    return Json(cars);
+        //}
 
         [HttpPost]
         public JsonResult AddCar(Car car)

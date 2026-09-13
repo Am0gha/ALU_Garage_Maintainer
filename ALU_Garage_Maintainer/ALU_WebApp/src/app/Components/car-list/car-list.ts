@@ -43,32 +43,8 @@ export class CarList implements OnInit{
   }
 
   fetchCarsOfClass(){
-      this.aluService.getCarListOfClass(this.selectCarClass).subscribe(
-        {
-          next:(response:ICar[]) => {
-            this.carList.set(response);
-            this.visibleCarList = this.carList();
-            this.showDivMsg=false;
-            console.log(this.carList());
-          },
-
-          error:(err) => {
-                        
-            this.errorMsg = err;
-            this.showDivMsg = true;
-          },
-
-          complete:()=>
-            {
-              console.log("Executed the fetchCars for a given class successfully :"+this.selectCarClass);
-            }
-          }
-      )
-  }
-
-  fetchCarsOfClass2(){
     try{
-      console.log(this.carList());
+      // console.log(this.carList());
       this.visibleCarList = this.carList().filter(car=>car.class===this.selectCarClass);
     }
     catch(error)
@@ -82,11 +58,17 @@ export class CarList implements OnInit{
   {
     try{
       this.searchCarName = this.carName.trim().toUpperCase();
-      if (this.searchCarName === "" || this.searchCarName === null || this.visibleCarList === ([]))
-        this.visibleCarList = this.carList();
+      if(this.viewType === "All")
+      {
+        if (this.searchCarName === "" || this.searchCarName === null || this.visibleCarList === ([]))
+          this.visibleCarList = this.carList();
+        else
+          this.visibleCarList = this.carList().filter(car => car.name.includes(this.searchCarName));  
+      }
       else
       {
-        this.visibleCarList = this.carList().filter(car=> car.name.includes(this.searchCarName));
+        this.fetchCarsOfClass();
+        this.visibleCarList = this.visibleCarList.filter(car => car.name.includes(this.searchCarName));
       }
     }
     catch(error){
@@ -103,7 +85,7 @@ export class CarList implements OnInit{
 
   onSelectCarClassChange(value: string) {
     this.selectCarClass = value;
-    this.fetchCarsOfClass2();
+    this.fetchCarsOfClass();
   }
 
   ngOnInit(): void {
