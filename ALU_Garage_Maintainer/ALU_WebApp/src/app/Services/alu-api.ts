@@ -64,6 +64,12 @@ export class AluApi {
     .pipe(catchError(this.errorHandler));
   }
 
+  getCarListOfName(name:string):Observable<ICar[]>
+  {
+    return this.http.get<ICar[]>('https://localhost:7213/api/Cars/GetCarByName?carName='+name)
+    .pipe(catchError(this.errorHandler));
+  }
+
   errorHandler(error:HttpErrorResponse){
     console.error(error);
     return throwError(()=>error.message || "Server Error");

@@ -10,9 +10,12 @@ import { Router } from '@angular/router';
 })
 export class CarList implements OnInit{
   viewType: string = 'All';
+  carName: string = '';
   errorMsg: string = "";
+  searchCarName: string = "";
   showDivMsg: boolean = false;
   carList = signal<ICar[]>([]);
+  visibleCarList = this.carList();
   carClass = signal<string[]>([]);
   selectCarClass: string = "";
   constructor(private readonly aluService:AluApi, private readonly router:Router){
@@ -24,6 +27,8 @@ export class CarList implements OnInit{
       {
         next:(response:ICar[])=>{
           this.carList.set(response);
+          this.visibleCarList = this.carList();
+          this.showDivMsg=false;
           console.log(this.carList());
         },
 
@@ -42,6 +47,8 @@ export class CarList implements OnInit{
         {
           next:(response:ICar[]) => {
             this.carList.set(response);
+            this.visibleCarList = this.carList();
+            this.showDivMsg=false;
             console.log(this.carList());
           },
 
@@ -58,6 +65,45 @@ export class CarList implements OnInit{
           }
       )
   }
+  fetchCarOfName()
+  {
+    try{
+      this.searchCarName = this.carName.trim().toUpperCase();
+      if (this.searchCarName === "" || this.searchCarName === null || this.visibleCarList === ([]))
+        this.visibleCarList = this.carList();
+      else
+      {
+        this.visibleCarList = this.carList().filter(car=> car.name.includes(this.searchCarName));
+      }
+    }
+    catch(error){
+      this.errorMsg="Check the name of the car and try again!";
+      this.showDivMsg=true;
+    }
+    // this.aluService.getCarListOfName(this.carName).subscribe(
+    //   {
+    //     next:(response:ICar[]) => {
+    //       this.carList.set(response);
+    //       this.showDivMsg=false;
+    //       console.log(this.carList());
+    //     },
+
+    //     error:(err) => {
+    //       this.errorMsg = err;
+    //       this.showDivMsg = true;
+    //     },
+
+    //     complete:() => {
+    //       console.log("Executed fetchCarOfName for the given name successfully :" + this.carName);
+    //     }
+    //   }
+    // )
+  }
+  onTypeCarName(value:string)
+  {
+    this.carName=value;
+    this.fetchCarOfName();
+  }
 
   onSelectCarClassChange(value: string) {
     this.selectCarClass = value;
@@ -72,6 +118,7 @@ export class CarList implements OnInit{
       {
         next:(response:string[]) => {
           this.carClass.set(response);
+          this.showDivMsg=false;
         },
 
         error: (err) => {

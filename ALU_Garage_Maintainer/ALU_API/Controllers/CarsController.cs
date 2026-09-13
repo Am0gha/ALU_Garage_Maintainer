@@ -98,22 +98,31 @@ namespace ALU_API.Controllers
             
         }
 
-        [HttpGet]
-        public JsonResult GetCarByName(string carName)
-        {
-            List<Car> cars = new List<Car>();
-            try
-            {
-                cars = _repo.fetchCarFromName(carName);
-            }
-            catch(Exception ex)
-            {
-                cars = null;
-                return Json(ex.Message);
-            }
+        /// <summary>
+        /// Commented because this API call would return the results of global table, wouldn't work on the class table.
+        /// When the cars belonging to certain class are shown in the table this function fails to search in the shown table
+        /// Instead it would search from the whole DB
+        /// </summary>
+        /// <param name="carClass"></param>
+        /// <param name="rarity"></param>
+        /// <returns></returns>
+        //[HttpGet]
+        //public JsonResult GetCarByName(string carName)
+        //{
+        //    List<Car> cars = new List<Car>();
+        //    try
+        //    {
+        //        cars = _repo.fetchCarFromName(carName);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        cars = null;
+        //        return Json(ex.Message);
+        //    }
 
-            return Json(cars);
-        }
+        //    return Json(cars);
+        //}
+
         [HttpGet]
         public JsonResult GetCarOfClassRarity(string carClass, string rarity)
         {

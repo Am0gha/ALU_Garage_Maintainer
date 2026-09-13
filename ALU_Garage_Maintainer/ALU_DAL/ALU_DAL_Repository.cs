@@ -168,6 +168,7 @@ namespace ALU_DAL
 
             try
             {
+                if (carName == "" || carName == null) return fetchCars();
                 cars = _context.Cars.Where(c => c.Name.Contains(carName)).ToList();
                 return cars;
             }

@@ -10,7 +10,7 @@
 
           <label>Class </label>
           <!-- <label *ngFor="let cls of carClass">{{cls}}</label> -->
-          <select name="car-class" [(ngModel)]="car().class" (change)="fetchRarity()">
+          <select name="car-class" [(ngModel)]="car().class" (ngModelchange)="fetchRarity()">
               <option value="" disabled selected>Select car's class</option>
 
               <option *ngFor="let cls of carClass()" [value]="cls">{{cls}}</option>

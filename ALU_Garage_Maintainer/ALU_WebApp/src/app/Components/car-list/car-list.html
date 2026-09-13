@@ -35,12 +35,19 @@
     <div *ngIf="showDivMsg" class="alert-message">
         {{ errorMsg }}
     </div>
+        
+    <div class="seach-bar">
+        <div class="panel">
+            <span class="summary-label">Car Name &nbsp;</span>
+            <input [(ngModel)]="carName" (ngModelChange)="onTypeCarName($event)">
+        </div>
+    </div>
 
     <div class="table-container" *ngIf="carList().length > 0; else emptyState">
         <div class="table-summary">
             <span class="summary-label">Showing</span>
-            <strong>{{ carList().length }}</strong>
-            <span>{{ viewType === 'All' ? 'vehicles' : 'vehicles in Class ' + selectCarClass }}</span>
+            <strong>{{ visibleCarList.length }}</strong>
+            <span>{{ viewType === 'All' ? 'VEHICLES' : 'VEHICLES IN CLASS ' + selectCarClass }}</span>
         </div>
 
         <table class="car-table" name="car-table">
@@ -57,7 +64,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let car of carList()">
+                <tr *ngFor="let car of visibleCarList">
                     <td class="car-name-cell">
                         <div class="car-name-stack">
                             <span class="car-name">{{ car.name }}</span>
