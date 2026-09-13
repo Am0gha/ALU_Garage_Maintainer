@@ -65,6 +65,19 @@ export class CarList implements OnInit{
           }
       )
   }
+
+  fetchCarsOfClass2(){
+    try{
+      console.log(this.carList());
+      this.visibleCarList = this.carList().filter(car=>car.class===this.selectCarClass);
+    }
+    catch(error)
+    {
+      this.errorMsg="Check the class of the car and try again!";
+      this.showDivMsg=true;
+    }
+  }
+
   fetchCarOfName()
   {
     try{
@@ -80,24 +93,7 @@ export class CarList implements OnInit{
       this.errorMsg="Check the name of the car and try again!";
       this.showDivMsg=true;
     }
-    // this.aluService.getCarListOfName(this.carName).subscribe(
-    //   {
-    //     next:(response:ICar[]) => {
-    //       this.carList.set(response);
-    //       this.showDivMsg=false;
-    //       console.log(this.carList());
-    //     },
-
-    //     error:(err) => {
-    //       this.errorMsg = err;
-    //       this.showDivMsg = true;
-    //     },
-
-    //     complete:() => {
-    //       console.log("Executed fetchCarOfName for the given name successfully :" + this.carName);
-    //     }
-    //   }
-    // )
+    
   }
   onTypeCarName(value:string)
   {
@@ -107,7 +103,7 @@ export class CarList implements OnInit{
 
   onSelectCarClassChange(value: string) {
     this.selectCarClass = value;
-    this.fetchCarsOfClass();
+    this.fetchCarsOfClass2();
   }
 
   ngOnInit(): void {
@@ -134,9 +130,9 @@ export class CarList implements OnInit{
   onViewTypeChange(value: string) {
     this.viewType = value;
     if (value === 'All') {
-      this.fetchCars();
+      this.visibleCarList=this.carList();
     } else {
-      this.carList.set([]);
+      this.visibleCarList=([]);
     }
   }
 }
